@@ -1,0 +1,53 @@
+name: base
+
+channels:
+  - esmvalgroup 
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies:
+  - numpy
+  - xarray
+  - pandas
+  - cartopy 
+  - matplotlib 
+  - seaborn 
+  - basemap
+  - geopy 
+  - netcdf4
+  - cis
+  - metpy
+  - scipy
+  - scikit-learn
+  - nc-time-axis
+  - plotly
+  - ipyleaflet
+  - rasterio
+  - tqdm
+  - requests
+  - pillow
+  - branca
+  - geopandas
+  - psyplot
+  - psy-maps 
+  - psyplot-gui 
+  - psy-reg 
+  - cdsapi 
+  - folium
+  - basemap-data-hires
+  - rasterstats
+  - cfgrib
+  - cdo
+  - nco
+  - jupytext
+  - rise
+  - papermill
+  - esmvaltool
+  - pip:
+      - dask_labextension
+      - ipydatawidgets
+      - sidecar
+      - geojsoncontour
+      - nbgitpuller
+      - pysplit
