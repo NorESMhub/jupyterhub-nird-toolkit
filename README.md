@@ -15,6 +15,8 @@ python -m ipykernel install --user --name=esmvaltool
 
 Then restart your server to see esmvaltool environment (as shown on the figure below).
 
+![](esmvaltool.png)
+
 
 ## Using esmvaltool from the command line
 
