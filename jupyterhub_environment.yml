@@ -1,20 +1,19 @@
-name: base
+name: esmvaltool
 
 channels:
-  - esmvalgroup 
+  - esmvalgroup
   - conda-forge
-  - bioconda
   - defaults
 
 dependencies:
   - numpy
   - xarray
   - pandas
-  - cartopy 
-  - matplotlib 
-  - seaborn 
+  - cartopy
+  - matplotlib
+  - seaborn
   - basemap
-  - geopy 
+  - geopy
   - netcdf4
   - cis
   - metpy
@@ -29,21 +28,17 @@ dependencies:
   - pillow
   - branca
   - geopandas
-  - psyplot
-  - psy-maps 
-  - psyplot-gui 
-  - psy-reg 
-  - cdsapi 
-  - folium
+  - cdsapi
+  - folium  
+  - esmvaltool
   - basemap-data-hires
   - rasterstats
   - cfgrib
   - cdo
   - nco
-  - jupytext
-  - rise
   - papermill
-  - esmvaltool
+  - jupytext
+  - pip
   - pip:
       - dask_labextension
       - ipydatawidgets
