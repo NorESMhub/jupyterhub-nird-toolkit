@@ -21,6 +21,22 @@ RUN source activate esmvaltool && \
     /opt/conda/bin/jupyter labextension install @pyviz/jupyterlab_pyviz \
                            jupyter-leaflet
 
+# Install requirements for cesm 
+ADD cesm_environment.yml cesm_environment.yml
+
+# Python packages
+RUN conda env create -f cesm_environment.yml && conda clean -yt
+RUN ["/bin/bash" , "-c", ". /opt/conda/etc/profile.d/conda.sh && \
+    conda activate cesm && \
+    python -m pip install ipykernel && \
+    ipython kernel install --user --name cesm && \
+    python -m ipykernel install --user --name=cesm && \
+    jupyter labextension install @jupyterlab/hub-extension \
+            @jupyter-widgets/jupyterlab-manager && \
+    jupyter labextension install jupyterlab-datawidgets && \
+    conda deactivate && \
+    conda init bash"]
+
 # Fix hub failure
 RUN fix-permissions $HOME
 
